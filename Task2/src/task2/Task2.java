@@ -34,10 +34,12 @@ public class Task2 {
        int size=s.length();
        char[] str=new char[size];
        int j=0;
+
        for(int k=0;k<size;k++){
            if(s.charAt(k)!= ' '){
             str[j]=s.charAt(k);
-            j++;
+
+            k++;
            }
        }
        

@@ -70,19 +70,21 @@ public class Task3 {
     */
    public static String stringEncryption(String s){
        
-   char[] chars=s.toCharArray();
-   for(int i=0;i<s.length();i++){
-   if(i%2!=0){
-   chars[i]=(char) (s.charAt(i)+9);
-   }
-   else if(i%3!=0){
-   chars[i]=(char) (s.charAt(i)-4);
-   }
-   else{
-   chars[i]=(char) (s.charAt(i)+12);
-   }
-   }
-   return chars.toString();
+       String w=" ";
+        int i=s.hashCode();
+//   char[] chars=s.toCharArray();
+//   for(int i=0;i<s.length();i++){
+//   if(i%2!=0){
+//   chars[i]=(char) (s.charAt(i)+9);
+//   }
+//   else if(i%3!=0){
+//   chars[i]=(char) (s.charAt(i)-4);
+//   }
+//   else{
+//   chars[i]=(char) (s.charAt(i)+12);
+//   }
+//   }
+   return w+i;
    }
    
 }

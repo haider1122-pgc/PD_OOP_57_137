@@ -20,7 +20,7 @@ public class Task3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws NoSuchAlgorithmException, NoSuchPaddingException {
-        Cipher c = Cipher.getInstance("RSA/ECB/OAEPWithSHA-1AndMGF1Padding") ;
+     //   Cipher c = Cipher.getInstance("RSA/ECB/OAEPWithSHA-1AndMGF1Padding") ;
         // TODO code application logic here
         Scanner s = new Scanner(System.in);
          String text,text1,text2;
@@ -58,9 +58,9 @@ public class Task3 {
     * @return Sting
     */
    public static String removeInteger(String s){
-       String k;
-       k = s.replaceAll("[0-9]","");
-       return k;
+       String modString;
+       modString = s.replaceAll("[0-9]","");
+       return modString;
    }
    /**
     * 
@@ -70,21 +70,23 @@ public class Task3 {
     */
    public static String stringEncryption(String s){
        
-       String w=" ";
-        int i=s.hashCode();
-//   char[] chars=s.toCharArray();
-//   for(int i=0;i<s.length();i++){
-//   if(i%2!=0){
-//   chars[i]=(char) (s.charAt(i)+9);
-//   }
-//   else if(i%3!=0){
-//   chars[i]=(char) (s.charAt(i)-4);
-//   }
-//   else{
-//   chars[i]=(char) (s.charAt(i)+12);
-//   }
-//   }
-   return w+i;
+       
+   String encrypt="";
+   for(int i=0;i<s.length();i++){
+   if(i%2!=0){
+   encrypt=encrypt+ (char)(s.charAt(i)+9);
    }
+   else if(i%3!=0){
+   encrypt=encrypt+(char) (s.charAt(i)-4);
+   }    
+   else{
+   encrypt=encrypt +(char)(s.charAt(i)+12);
+   }
+   }
+   
+   return encrypt;
+   }
+   
+        
    
 }
